@@ -32,3 +32,34 @@ Examples:
     (Condition 2) not fulfilled).
 
 
+## 1. Sum of two lowest positive integers
+### Category: 
+>`array`
+
+Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+
+For example, when an array is passed like `[19, 5, 42, 2, 77]`, the output should be 7.
+
+```js
+[10, 343445353, 3453445, 3453545353453] should return 3453455.
+
+```
+
+## Ones and Zeros
+### Category: 
+>`array`
+
+Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+
+Eg: `[0, 0, 0, 1]` is treated as `0001` which is the binary representation of 1.
+
+```js
+Testing: [0, 0, 0, 1] ==> 1
+Testing: [0, 0, 1, 0] ==> 2
+Testing: [0, 1, 0, 1] ==> 5
+Testing: [1, 0, 0, 1] ==> 9
+
+```
+However, the arrays can have varying lengths, not just limited to 4.
+
+
