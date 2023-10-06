@@ -249,5 +249,32 @@ const onesAndZero = (arr) => {
 	return result;
 };
 
-console.log(onesAndZero([1, 0, 0, 0]));
+const identicalElement = (first, second) => {
+	let result = []
+	let temp = []
+	for (let i = 0; i < second.length; i++) {
+		first.push(second[i])
+		if (temp.includes(first[i])) {
+			if (result.indexOf(first[i]) === -1) {
+				result.push(first[i])
+			}
+		} else {
+			temp.push(first[i])
+		}
+	}
+
+	return result
+}
+
+const identicalElement2 = (first, second) => {
+	const firstSet = new Set(first);
+	const secondSet = new Set(second);
+	const intersection = [...firstSet].filter(element => secondSet.has(element));
+	return intersection;
+  }
+
+const array_1 = [1, 2, 3, 4, 10, 4]
+const array_2 = [3, 15, 5, 6, 8, 9, 11, 12, 13 ,4, 4]
+// expected output = [ 3, 4]
+console.log(identicalElement(array_1, array_2));
 // console.log(lowestTwoInteger([10, 343445353, 3453445, 3453545353453]));

@@ -32,7 +32,7 @@ Examples:
     (Condition 2) not fulfilled).
 
 
-## 1. Sum of two lowest positive integers
+## 2. Sum of two lowest positive integers
 ### Category: 
 >`array`
 
@@ -45,7 +45,7 @@ For example, when an array is passed like `[19, 5, 42, 2, 77]`, the output shoul
 
 ```
 
-## Ones and Zeros
+## 3. Ones and Zeros
 ### Category: 
 >`array`
 
@@ -62,4 +62,18 @@ Testing: [1, 0, 0, 1] ==> 9
 ```
 However, the arrays can have varying lengths, not just limited to 4.
 
+## 4. Find identical element
+### Category:
+>`array`
 
+Ada 2 array of integer yang memiliki panjang yang berbeda, dan tidak berurutan. Buatkan program yang dapat menampilkan elemen yang sama dari dua array tersebut.
+
+```js
+input:
+array_1 = [1, 2, 3, 4, 10, 4]
+array_2 = [3, 15, 5, 6, 8, 9, 11, 12, 13 ,4, 4]
+
+
+output:
+[3 , 4]
+```
