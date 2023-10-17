@@ -250,31 +250,47 @@ const onesAndZero = (arr) => {
 };
 
 const identicalElement = (first, second) => {
-	let result = []
-	let temp = []
-	for (let i = 0; i < second.length; i++) {
-		first.push(second[i])
-		if (temp.includes(first[i])) {
-			if (result.indexOf(first[i]) === -1) {
-				result.push(first[i])
+	const joinArray = first.concat(second);
+	let temp = [];
+	let result = [];
+
+	for (let i = 0; i < joinArray.length; i++) {
+		if (temp.includes(joinArray[i])) {
+			if (result.indexOf(joinArray[i]) == -1) {
+				result.push(joinArray[i]);
 			}
 		} else {
-			temp.push(first[i])
+			temp.push(joinArray[i])
 		}
 	}
 
-	return result
-}
+	return result;
+};
 
 const identicalElement2 = (first, second) => {
 	const firstSet = new Set(first);
 	const secondSet = new Set(second);
-	const intersection = [...firstSet].filter(element => secondSet.has(element));
+	const intersection = [...firstSet].filter((element) =>
+		secondSet.has(element)
+	);
 	return intersection;
-  }
+};
 
-const array_1 = [1, 2, 3, 4, 10, 4]
-const array_2 = [3, 15, 5, 6, 8, 9, 11, 12, 13 ,4, 4]
+const identicalElement3 = (first, second) => {
+	const set1 = new Set(first)
+	const result = new Set()
+
+	for (const iterator of second) {
+		if (set1.has(iterator)) {
+			result.add(iterator)
+		}
+	}
+
+	return Array.from(result)
+}
+
+const array_1 = [1, 2, 3, 4, 10, 4];
+const array_2 = [3, 15, 5, 6, 8, 9, 1, 1, 11, 12, 13, 4, 4, 1];
 // expected output = [ 3, 4]
-console.log(identicalElement(array_1, array_2));
+console.log(identicalElement3(array_1, array_2));
 // console.log(lowestTwoInteger([10, 343445353, 3453445, 3453545353453]));

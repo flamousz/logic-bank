@@ -12,7 +12,7 @@ const findSameOne = (str) => {
 		}
 	}
 
-	return char;
+	return charList;
 };
 
 console.log(findSameOne("aabbcc")); // abc
