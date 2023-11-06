@@ -250,21 +250,22 @@ const onesAndZero = (arr) => {
 };
 
 const identicalElement = (first, second) => {
-	const joinArray = first.concat(second);
-	let temp = [];
-	let result = [];
+	let temp = []
+	let result = []
 
-	for (let i = 0; i < joinArray.length; i++) {
-		if (temp.includes(joinArray[i])) {
-			if (result.indexOf(joinArray[i]) == -1) {
-				result.push(joinArray[i]);
+	const jointArray = first.concat(second)
+
+	for (let i = 0; i < jointArray.length; i++) {
+		if (temp.includes(jointArray[i])) {
+			if (result.indexOf(jointArray[i]) === -1) {
+				result.push(jointArray[i])
 			}
 		} else {
-			temp.push(joinArray[i])
+			temp.push(jointArray[i])
 		}
 	}
 
-	return result;
+	return result
 };
 
 const identicalElement2 = (first, second) => {
@@ -287,7 +288,7 @@ const identicalElement3 = (first, second) => {
 	}
 
 	return Array.from(result)
-}
+};
 
 const array_1 = [1, 2, 3, 4, 10, 4];
 const array_2 = [3, 15, 5, 6, 8, 9, 1, 1, 11, 12, 13, 4, 4, 1];
